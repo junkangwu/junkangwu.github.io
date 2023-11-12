@@ -104,7 +104,7 @@ A.thumbnail:hover {
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.06);
 	padding: 0.05em 0.2em;
 	margin-right: 5px;
-	min-width: 2000px;  /* 你可以根据需要调整这个值 */
+	min-width: 300px;  /* 你可以根据需要调整这个值 */
     display: inline-block;  /* 添加这行代码以使 min-width 生效 */
 }
 .a_link {
