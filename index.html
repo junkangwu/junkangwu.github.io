@@ -1,12 +1,14 @@
-<!DOCTYPE html PUBLIC>
-<html>
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=7.0000" http-equiv="X-UA-Compatible">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Junkang Wu's Homepage</title>
-    <meta name="description" content="Junkang Wu, Graduate student at University of Science and Technology of China. Machine learning, data mining.">
-    <meta name="keywords" content="Junkang Wu, Graduate student, USTC, machine learning, data mining, information retrieval, graph.">
+    <meta name="description" content="Junkang Wu, PhD student at University of Science and Technology of China. Machine learning, data mining, LLM alignment.">
+    <meta name="keywords" content="Junkang Wu, PhD student, USTC, machine learning, data mining, LLM alignment, RLHF, DPO.">
     <meta name="google-site-verification" content="TxzBk-MYgzBDEY6CgZpiNXzvI9KUtlapaunnmW_rKrU" />
     <link rel="stylesheet" type="text/css" href="./files/donghd.css">
-    <style>@-moz-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-webkit-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@-o-keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}@keyframes nodeInserted{from{opacity:0.99;}to{opacity:1;}}embed,object{animation-duration:.001s;-ms-animation-duration:.001s;-moz-animation-duration:.001s;-webkit-animation-duration:.001s;-o-animation-duration:.001s;animation-name:nodeInserted;-ms-animation-name:nodeInserted;-moz-animation-name:nodeInserted;-webkit-animation-name:nodeInserted;-o-animation-name:nodeInserted;}</style>
   </head>
   
   <body>
@@ -15,6 +17,14 @@
       <div id="news">
         <h2>News</h2><br>
         <font size="3px">
+          <b>26 Jan 2026</b><br>
+          <span class="easylink">
+            Two papers are accepted by <a href="https://iclr.cc/", target="_blank">ICLR'26</a> on LLM reasoning and alignment.
+          </span><br><br>
+          <b>10 Dec 2025</b><br>
+          <span class="easylink">
+            One paper is accepted by <a href="https://aaai.org/conference/aaai/aaai-26/", target="_blank">AAAI'26</a> on LVLM hallucination.
+          </span><br><br>
           <b>18 Sep 2025</b><br>
           <span class="easylink">
             One paper is accepted by <a href="https://neurips.cc/", target="_blank">NeurIPS'25</a> on LLM alignment.
@@ -149,14 +159,23 @@
 
 
         <div id="papers">
-          <h2>Preprints</h2> </br>
 
+          <h2>Publications</h2>
+          <div class="filter-buttons">
+            <button id="filterFirstAuthor" class="filter-btn active" onclick="filterPapers('first-author')">First & Co-first Author Papers</button>
+            <button id="filterAll" class="filter-btn" onclick="filterPapers('all')">All Papers</button>
+          </div>
 
-          <table><tbody><tr>
+          <div class="year-separator">
+            </br>
+            <b class="year-label"> In the Year of 2026: </b> </br></br>
+          </div>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/abs/2503.07426" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Quantile Advantage Estimation for Entropy-Safe Reasoning</span><br>
             <b>Junkang Wu</b>, Kexin Huang, Jiancan Wu, An Zhang, Xiang Wang, Xiangnan He<br>
-            <span class="conference">arxiv 2025</span> &nbsp;&nbsp;
+            <span class="conference">ICLR 2026</span> &nbsp;&nbsp;
+            <span class="accept_rate">(Full, Accept Rate: 28%)</span>
             <!-- <span class="accept_rate">(Full)</span> -->
             &nbsp;&nbsp;
             [<a href="https://arxiv.org/pdf/2509.22611v1" target="_blank" style="color: #c05b4d; text-decoration: none;">PDF</a>]
@@ -165,13 +184,36 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
+          <table class="paper-item other-author"><tbody><tr>
+            <td class="left"><a href="https://arxiv.org/abs/2503.07426" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
+            <td><span class="title">On the Direction of RLVR Updates for LLM Reasoning: Identification and Exploitation</span><br>
+              Kexin Huang, Haoming Meng, <b>Junkang Wu</b>, Jinda Lu, Chiyu Ma, Ziqian Chen, Xue Wang, Bolin Ding, Jiancan Wu, Xiang Wang, Xiangnan He, Guoyin Wang, Jingren Zhou <br>
+            <span class="conference">ICLR 2026</span> &nbsp;&nbsp;
+            <span class="accept_rate">(Full, Accept Rate: 28%)</span>
+            <!-- <span class="accept_rate">(Full)</span> -->
+            &nbsp;&nbsp;
+            [<a href="https://openreview.net/forum?id=r6Pw3RiMYL" target="_blank" style="color: #c05b4d; text-decoration: none;">PDF</a>]
+            <!-- [<a href="https://github.com/junkangwu/QAE" target="_blank" style="color: #c05b4d; text-decoration: none;">Codes</a>] -->
+            <!-- [<a href="./slides/NeurIPS2023_slides.pdf" target="_blank" style="color: #c05b4d; text-decoration: none;">Slides</a>] -->
+            <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
+          </td></tr></tbody></table>
 
-          <h2>Publications</h2> </br>
-          </br>
-          <b> In the Year of 2025: </b> </br></br>
+          <table class="paper-item other-author"><tbody><tr>
+            <td class="left"><a href="https://arxiv.org/pdf/2511.10268" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
+            <td><span class="title">Causal-HalBench: Uncovering LVLMs Object Hallucinations Through Causal Intervention</span><br>
+            Zhe Xu, Zhicai Wang, <b>Junkang Wu</b>, Jinda Lu, Xiang Wang<br>
+            <span class="conference">AAAI 2026</span> &nbsp;&nbsp;
+            &nbsp;&nbsp;
+            [<a href="https://arxiv.org/pdf/2511.10268" target="_blank" style="color: #c05b4d; text-decoration: none;">PDF</a>]
+          </td></tr></tbody></table>
+
+          <div class="year-separator">
+            <br><br>
+            <b class="year-label"> In the Year of 2025: </b> </br></br>
+          </div>
 
 
-          <table><tbody><tr>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/abs/2503.07426" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">RePO: ReLU-based Preference Optimization</span><br>
             <b>Junkang Wu</b>, Kexin Huang, Xue Wang, Jinyang Gao, Bolin Ding, Jiancan Wu, Xiangnan He, Xiang Wang<br>
@@ -185,7 +227,7 @@
           </td></tr></tbody></table>
 
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2410.15817" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">LaMP-Val: Large Language Models Empower Personalized Valuation in Auction</span><br>
             Jie Sun, Tianyu Zhang, Houcheng Jiang, Kexin Huang, Xiang Shu, Zhibo Zhu, Lintao Ma, Xingyu Lu, Jun Zhou, <b>Junkang Wu</b>, Chi Luo, An Zhang, Jiancan Wu*, Xiang Wang<br>
@@ -200,7 +242,7 @@
           </td></tr></tbody></table>
 
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2506.03690" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Robust Preference Optimization via Dynamic Target Margins</span><br>
             Jie Sun, <b>Junkang Wu</b>, Jiancan Wu, Zhibo Zhu, Xingyu Lu, Jun Zhou, Lintao Ma, Xiang Wang<br>
@@ -214,7 +256,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2410.10148" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">AlphaDPO: Adaptive Reward Margin is What Direct Preference Optimization Needs</span><br>
             <b>Junkang Wu</b>, Xue Wang, Zhengyi Yang, Jiancan Wu, Jinyang Gao, Bolin Ding, Xiang Wang, Xiangnan He<br>
@@ -227,7 +269,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2503.01864" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Larger or Smaller Reward Margins to Select Preferences for Alignment?</span><br>
             Kexin Huang, <b>Junkang Wu</b>, Ziqian Chen, Xue Wang, Jinyang Gao, Bolin Ding, Jiancan Wu, Xiangnan He, Xiang Wang<br>
@@ -241,7 +283,7 @@
           </td></tr></tbody></table>
 
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2502.01943" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">DAMA: Data- and Model-aware Alignment of Multi-modal LLMs</span><br>
             Jinda Lu, <b>Junkang Wu</b>, Jinghan Li, Xiaojun Jia, Shuo Wang, YiFan Zhang, Junfeng Fang, Xiang Wang, Xiangnan He<br>
@@ -254,7 +296,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2502.10391" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">MM-RLHF: The Next Step Forward in Multimodal LLM Alignment</span><br>
             YiFan Zhang, Tao Yu, Haochen Tian, Chaoyou Fu, Peiyan Li, JianshuZeng, Wulin Xie, Yang Shi, Huanyu Zhang, <b>Junkang Wu</b>, Xue Wang, Yibo Hu, Bin Wen, Tingting Gao, Zhang Zhang, Fan Yang, Di ZHANG, Liang Wang, Rong Jin<br>
@@ -267,7 +309,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2407.07880" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Towards Robust Alignment of Language Models: Distributionally Robustifying Direct Preference Optimization</span><br>
             <b>Junkang Wu</b>, Yuexiang Xie, Zhengyi Yang, Jiancan Wu, Jiawei Chen, Jinyang Gao, Bolin Ding, Xiang Wang, Xiangnan He<br>
@@ -280,11 +322,14 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <b> In the Year of 2024: </b> </br></br>
+          <div class="year-separator">
+            <br><br>
+            <b class="year-label"> In the Year of 2024: </b> </br></br>
+          </div>
 
-          <table><tbody><tr>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2407.08639" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
-            <td><span class="title">$\beta$-DPO: Direct Preference Optimization with Dynamic $\beta$</span><br>
+            <td><span class="title">&beta;-DPO: Direct Preference Optimization with Dynamic &beta;</span><br>
             <b>Junkang Wu</b>, Yuexiang Xie, Zhengyi Yang, Jiancan Wu, Jinyang Gao, Bolin Ding, Xiang Wang, Xiangnan He<br>
             <span class="conference">NeurIPS 2024</span> &nbsp;&nbsp;
             <!-- <span class="accept_rate">(Full)</span> -->
@@ -295,7 +340,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2406.14868" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Direct Multi-Turn Preference Optimization for Language Agents</span><br>
               Wentao Shi, Mengqi Yuan, <b>Junkang Wu</b>, Qifan Wang, Fuli Feng<br>
@@ -307,7 +352,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2403.00844.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Lower-Left Partial AUC: An Effective and Efficient Optimization Metric for Recommendation</span><br>
             Wentao Shi, Wang Chenxu, Fuli Feng, Yang Zhang, Wenjie Wang, <b>Junkang Wu</b>, Xiangnan He<br>
@@ -320,7 +365,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2312.12882.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">BSL: Understanding and Improving Softmax Loss for Recommendation</span><br>
             <b>Junkang Wu</b>, Jiawei Chen, Jiancan Wu, Wentao Shi, Jizhi Zhang, Xiang Wang<br>
@@ -333,7 +378,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://junkangwu.github.io/" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Masked Graph Modeling with Multi-View Contrast</span><br>
             Yanchen Luo, Sihang Li, Yongduo Sui, <b>Junkang Wu</b>, Jiancan Wu, Xiang Wang, Xiangnan He<br>
@@ -345,11 +390,13 @@
             [<a href="./slides/NeurIPS2023_slides.pdf" target="_blank" style="color: #c05b4d; text-decoration: none;">Slides</a>]
             [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
-          </br>
-          
-          <b> In the Year of 2023: </b> </br></br>
 
-          <table><tbody><tr>
+          <div class="year-separator">
+            </br><br><br>
+            <b class="year-label"> In the Year of 2023: </b> </br></br>
+          </div>
+
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2310.11048.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Understanding Contrastive Learning via Distributionally Robust Optimization</span><br>
             <b>Junkang Wu</b>, Jiawei Chen, Jiancan Wu, Wentao Shi, Xiang Wang, Xiangnan He<br>
@@ -362,9 +409,9 @@
             [<a href="https://zhuanlan.zhihu.com/p/670251964" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>]
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2302.04775.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
-            <td><span class="title">Adap-$\tau$: Adaptively Modulating Embedding Magnitude for Recommendation</span><br>
+            <td><span class="title">Adap-&tau;: Adaptively Modulating Embedding Magnitude for Recommendation</span><br>
             Jiawei Chen*, <b>Junkang Wu*</b>, Jiancan Wu, Sheng Zhou, Xuezhi Cao, Xiangnan He<br>
             <span class="conference">WWW 2023</span> &nbsp;&nbsp;
             <span class="accept_rate">(Full, Accept Rate: 19.2%)</span> 
@@ -376,7 +423,7 @@
             &nbsp;&nbsp;* Co-first author
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2302.03472.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">On the Theories Behind Hard Negative Sampling for Recommendation</span><br>
             Wentao Shi, Jiawei Chen, Fuli Feng, Jizhi Zhang, <b>Junkang Wu</b>, Chongming Gao, Xiangnan He<br>
@@ -389,7 +436,7 @@
             <!-- [<a href="https://zhuanlan.zhihu.com/p/428055321" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
 
-          <table><tbody><tr>
+          <table class="paper-item other-author"><tbody><tr>
             <td class="left"><a href="https://www.ijcai.org/proceedings/2023/0252.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">Discriminative-Invariant Representation Learning for Unbiased Recommendation</span><br>
             Hang Pan, Jiawei Chen, Fuli Feng, Wentao Shi, <b>Junkang Wu</b>,  Xiangnan He<br>
@@ -401,11 +448,13 @@
             [<a href="https://github.com/HungPaan/DIRL" target="_blank" style="color: #c05b4d; text-decoration: none;">Codes</a>]
             <!-- [<a href="https://zhuanlan.zhihu.com/p/428055321" target="_blank" style="color: #c05b4d; text-decoration: none;">知乎</a>] -->
           </td></tr></tbody></table>
-          </br>
-          
-          <b> In the Year of 2021: </b> </br></br>
 
-          <table><tbody><tr>
+          <div class="year-separator">
+            </br><br><br>
+            <b class="year-label"> In the Year of 2021: </b> </br></br>
+          </div>
+
+          <table class="paper-item first-author"><tbody><tr>
             <td class="left"><a href="https://arxiv.org/pdf/2108.09628.pdf" target="_blank"><img src="./files/pdf.gif"><br>pdf</a></td>
             <td><span class="title">DisenKGAT: Knowledge Graph Embedding with Disentangled Graph Attention Network</span><br>
             <b>Junkang Wu</b>, Wentao Shi, Xuezhi Cao, Jiawei Chen, Wenqiang Lei, Fuzheng Zhang, Wei Wu, Xiangnan He<br>
@@ -497,6 +546,49 @@
 
       </div>
     </div>
+
+    <script>
+      // Filter papers by authorship
+      function filterPapers(filterType) {
+        const papers = document.querySelectorAll('.paper-item');
+        const yearSeparators = document.querySelectorAll('.year-separator');
+        const firstAuthorBtn = document.getElementById('filterFirstAuthor');
+        const allBtn = document.getElementById('filterAll');
+
+        if (filterType === 'first-author') {
+          // Show only first-author and co-first author papers
+          papers.forEach(paper => {
+            if (paper.classList.contains('first-author')) {
+              paper.style.display = '';
+            } else {
+              paper.style.display = 'none';
+            }
+          });
+          // Hide year separators
+          yearSeparators.forEach(separator => {
+            separator.style.display = 'none';
+          });
+          firstAuthorBtn.classList.add('active');
+          allBtn.classList.remove('active');
+        } else {
+          // Show all papers
+          papers.forEach(paper => {
+            paper.style.display = '';
+          });
+          // Show year separators
+          yearSeparators.forEach(separator => {
+            separator.style.display = '';
+          });
+          allBtn.classList.add('active');
+          firstAuthorBtn.classList.remove('active');
+        }
+      }
+
+      // Initialize: show only first-author papers by default
+      window.addEventListener('DOMContentLoaded', function() {
+        filterPapers('first-author');
+      });
+    </script>
 
   </body>
   </html>
